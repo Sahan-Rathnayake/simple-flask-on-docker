@@ -4,7 +4,7 @@ services:
   app:
     build: ./services/app
     restart: always
-    command: gunicorn --bind 0.0.0.0:5000 run:app
+    command: gunicorn --bind 0.0.0.0:5000 -w 3 run:app
     volumes:
       - ./services/app/:/moresand
     ports:
