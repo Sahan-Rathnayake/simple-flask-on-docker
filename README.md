@@ -27,7 +27,7 @@ Check the groups assigned for the user using the following command, which will r
 groups foo
 ```
 
-If the user is not in 'docker' group, then execute the following command with a user that has sudo or root privileges. It will assing user 'foo' to 'docker' group. Replace 'foo' with respective username.
+If the user is not in 'docker' group, then execute the following command with a user that has sudo or root privileges. It will assign user 'foo' to 'docker' group. Replace 'foo' with respective username.
 ```bash
 sudo usermod -aG foo docker
 ```
@@ -51,3 +51,5 @@ Run the following command to inspect the started containers.
 ```bash
 docker ps
 ```
+
+Open browser and navigate to http://127.0.0.1 and it should direct into a web page displaying "Hello World" 
