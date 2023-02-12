@@ -1,4 +1,4 @@
-# simple-flsk-on-docker
+# simple-flask-on-docker
 
 This is a simple python-based flask application exposed using a nginx server via a gunicorn gateway. It also has a dockerized postgres database which can be used as the database for a more advanced python application.
 
