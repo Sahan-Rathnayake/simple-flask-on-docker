@@ -22,12 +22,12 @@ https://docs.docker.com/compose/install/linux/#install-using-the-repository
 
 The user should have privileges to execute docker commands. If the user is root, skip the following steps.
 
-Check the groups assigned for the user using the following command, which will return the groups of user 'foo'. Replace 'foo' with respective username.
+Check the groups assigned for the user using the following command, which will return the groups of user *foo*. Replace *foo* with respective username.
 ```bash
 groups foo
 ```
 
-If the user is not in 'docker' group, then execute the following command with a user that has sudo or root privileges. It will assign user 'foo' to 'docker' group. Replace 'foo' with respective username.
+If the user is not in *docker* group, then execute the following command with a user that has sudo or root privileges. It will assign user *foo* to *docker* group. Replace *foo* with respective username.
 ```bash
 sudo usermod -aG foo docker
 ```
@@ -52,4 +52,23 @@ Run the following command to inspect the started containers.
 docker ps
 ```
 
-Open browser and navigate to http://127.0.0.1 and it should direct into a web page displaying "Hello World" 
+Open browser and navigate to http://127.0.0.1 and it should direct into a web page displaying **Hello World**
+
+## Troubleshooting
+
+If the web page cannot be viewed with error *ERR_CONNECTION_REFUSED*, run the following command to view the containers.
+```bash
+docker ps -a
+```
+
+If either **proxy** or **app** container is not ready or restarting, run the following command to inspect the logs.
+```bash
+# outputs logs of all services
+docker-compose logs
+
+# outputs logs of app
+docker-compose logs app
+
+# outputs logs of proxy
+docker-compose logs proxy
+```
